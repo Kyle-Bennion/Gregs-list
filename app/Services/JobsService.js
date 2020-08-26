@@ -9,6 +9,31 @@ import STORE from "../store.js";
 //Public
 class JobsService {
 
+
+  addJob() {
+
+  }
+  removeJob() {
+
+  }
+
+  applyJob() {
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 const SERVICE = new JobsService();
