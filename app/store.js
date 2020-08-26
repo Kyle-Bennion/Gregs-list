@@ -14,7 +14,7 @@ let _state = {
   /** @type {House[]} */
   houses: [new House({ style: "Traditional", model: "4 Bed 3 Bath", price: 259894, img: "//placehold.it/200x200 ", description: "This  house is perfect for an aging couple looking to downsize and growing families looking for a little more room." }), new House({ style: "Cottage", model: "3 Bed 2.5 Bath", price: 219894, img: "//placehold.it/200x200", description: "This is a lovely new construction home. Located just on the outskirts of a main city with short commute times." }), new House({ style: "Modern", model: "5 Ben 5 Bath", price: 499893, img: "//placehold.it/200x200", description: "This is a rather large home with perfect clean lines designed for the up to date technologically savy family." })],
   /** @type {Job[]} */
-  jobs: []
+  jobs: [new Job({ type: "Intellegence", title: "Data Analysis", wage: "188k", rate: "Salary", img: "//placehold.it/200x200", responsibilities: "Pour through critical data and determine threat levels." }), new Job({ type: "Computer-Technology", title: "Data Entry", wage: "39k", rate: "18.50", img: "//placehold.it/200x200", responsibilities: "Pour through critical data and input it into correct field with a degree of accuracy." }), new Job({ type: "Construction", title: "Project Manager", wage: "101k", rate: "Salary", img: "//placehold.it/200x200", responsibilities: "manage high work loads with many moving parts ensuring that the project is completed with minimal delays" })]
 };
 
 class Store {
