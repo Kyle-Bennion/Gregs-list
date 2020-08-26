@@ -1,4 +1,6 @@
 import Car from "./Models/Car.js";
+import House from "./Models/House.js";
+import Job from "./Models/Job.js"
 console.log(1);
 
 let _state = {
