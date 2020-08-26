@@ -1,27 +1,27 @@
-import Car from "../Models/House.js";
+import House from "../Models/House.js";
 import STORE from "../store.js";
 
 //Public
-class CarsService {
-  removeCar(id) {
-    let carIndex = STORE.State.cars.findIndex(c => c.id === id)
-    if (carIndex === -1) {
+class HouseService {
+  removeHouse(id) {
+    let houseIndex = STORE.State.houses.findIndex(c => c.id === id)
+    if (houseIndex === -1) {
       console.error("invalid id")
       return
     }
-    STORE.State.cars.splice(carIndex, 1)
+    STORE.State.houses.splice(houseIndex, 1)
   }
 
   bid(id) {
-    let car = STORE.State.cars.find(c => c.id === id)
-    car.price += 100;
+    let house = STORE.State.houses.find(c => c.id === id)
+    house.price += 10000;
   }
 
-  createCar(rawCar) {
-    let car = new Car(rawCar)
-    STORE.State.cars.push(car)
+  createHouse(rawHouse) {
+    let house = new House(rawHouse)
+    STORE.State.houses.push(house)
   }
 }
 
-const SERVICE = new CarsService();
+const SERVICE = new HouseService();
 export default SERVICE;
