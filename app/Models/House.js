@@ -2,12 +2,11 @@ import { generateId } from "../utils.js";
 console.log(0)
 export default class House {
   // Object Destructuring
-  constructor({ style, model, year, price, img, description }) {
+  constructor({ style, model, price, img, description }) {
     console.log(2);
     this.id = generateId()
-    this.make = make
+    this.style = style
     this.model = model
-    this.year = year
     this.price = price
     this.img = img
     this.description = description || "no description"
@@ -19,7 +18,7 @@ export default class House {
       <div class="card">
           <img class="card-img-top" src="${this.img}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.make} - ${this.model} - ${this.year}</h4>
+              <h4 class="card-title">${this.style} - ${this.model}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
                   <button class="btn btn-outline-danger" onclick="app.carsController.removeCar('${this.id}')">Delete</button>
