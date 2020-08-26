@@ -2,15 +2,15 @@ import { generateId } from "../utils.js";
 console.log(0)
 export default class Job {
   // Object Destructuring
-  constructor({ make, model, year, price, img, description }) {
+  constructor({ type, title, wage, rate, img, responsibilities }) {
     console.log(2);
     this.id = generateId()
-    this.make = make
-    this.model = model
-    this.year = year
-    this.price = price
+    this.type = type
+    this.title = title
+    this.wage = wage
+    this.rate = rate
     this.img = img
-    this.description = description || "no description"
+    this.responsibilities = responsibilities || "no description"
   }
 
   get Template() {
@@ -19,12 +19,12 @@ export default class Job {
       <div class="card">
           <img class="card-img-top" src="${this.img}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.make} - ${this.model} - ${this.year}</h4>
-              <p class="card-text">${this.description}</p>
+              <h4 class="card-title">${this.type} - ${this.title} - ${this.wage}</h4>
+              <p class="card-text">${this.responsibilities}</p>
               <div class="d-flex justify-content-between">
                   <button class="btn btn-outline-danger" onclick="app.carsController.removeCar('${this.id}')">Delete</button>
                   <button class="btn btn-outline-info" onclick="app.carsController.bid('${this.id}')">+ $100</button>
-                  <p>$${this.price.toFixed(2)}</p>
+                  <p>$${this.rate.toFixed(2)}</p>
               </div>
           </div>
       </div>

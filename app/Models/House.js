@@ -3,7 +3,7 @@ console.log(0)
 export default class House {
   // Object Destructuring
   constructor({ style, model, price, img, description }) {
-    console.log(2);
+    console.log();
     this.id = generateId()
     this.style = style
     this.model = model
