@@ -1,10 +1,5 @@
-import Car from "../Models/Job.js";
 import STORE from "../store.js";
 import Job from "../Models/Job.js";
-
-
-
-
 
 //Private
 //Public
@@ -23,8 +18,9 @@ class JobsService {
     STORE.State.jobs.splice(jobIndex, 1)
   }
   //i dont know how to do this one because i dont know where the input will be going.
-  applyJob() {
-
+  applyJob(id) {
+let job = STORE.State.jobs.find(j => j.id === id)
+console.log("applied for job")
   }
 
 

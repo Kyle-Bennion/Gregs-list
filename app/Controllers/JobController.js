@@ -3,7 +3,10 @@ import STORE from "../store.js";
 console.log(3)
 
 function _drawJobs() {
-
+let jobs = STORE.State.jobs
+let template = ''
+jobs.forEach(j => template += j.Template)
+document.getElementById('jobs').innerHTML = template
 }
 
 
@@ -18,7 +21,7 @@ function _drawJobs() {
 //Public
 export default class JobsController {
   constructor() {
-
+_drawJobs();
   }
 
 
